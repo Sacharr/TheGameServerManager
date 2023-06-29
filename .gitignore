@@ -1,0 +1,8 @@
+# ignore files in .vs folder
+.vs/
+
+# ignore files in obj folder
+obj/
+
+#ignroe files in bin folder
+bin/

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,12 @@ namespace ValheimServer
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void SteamcmdButton_Click(object sender, RoutedEventArgs e)
+        {
+            //MessageBox.Show("The button works");
+            Process.Start("steamcmd.exe");
         }
     }
 }

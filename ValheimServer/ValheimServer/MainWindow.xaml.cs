@@ -29,7 +29,7 @@ namespace ValheimServer
         private void SteamcmdButton_Click(object sender, RoutedEventArgs e)
         {
             //MessageBox.Show("The button works");
-            Process.Start("steamcmd.exe");
+            Process.Start("steamcmd.exe", "+quit");
         }
     }
 }

@@ -31,5 +31,9 @@ namespace ValheimServer
             
             Process.Start("steamcmd.exe", "+quit");
         }
+
+        private void InstallUpdateValheim(object sender, RoutedEventArgs e)
+        {
+        }
     }
 }

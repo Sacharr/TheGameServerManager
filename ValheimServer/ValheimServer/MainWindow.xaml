@@ -12,6 +12,8 @@
         <vm:MainWindowViewModel/>
     </Window.DataContext>
     <Grid>
-        <Button x:Name="SteamcmdButton" Content="Update SteamCmd" HorizontalAlignment="Left" Margin="67,78,0,0" VerticalAlignment="Top" Height="34" Width="116" Click="SteamcmdButton_Click"/>
+       
+       <Button x:Name="SteamcmdButton" Content="Update SteamCmd" HorizontalAlignment="Left" Margin="67,78,0,0" VerticalAlignment="Top" Height="34" Width="116" Click="SteamcmdButton_Click"/>
+        <Button Content="Update ValheimCmd" Height="28" Width="130" Click="InstallUpdateValheim"/>
     </Grid>
 </Window>

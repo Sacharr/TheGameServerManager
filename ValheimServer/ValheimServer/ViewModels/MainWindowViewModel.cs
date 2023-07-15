@@ -9,5 +9,11 @@ namespace ValheimServer.ViewModels
 {
     public class MainWindowViewModel
     {
+        private string _steamButtonText = "Update SteamCmd";
+        public string SteamButtonText
+        { 
+            get { return _steamButtonText; }
+        }
+        
     }
 }

@@ -13,5 +13,6 @@
     </Window.DataContext>
     <Grid>
         <Button x:Name="SteamcmdButton" Content="{Binding SteamButtonText, Mode=OneWay}" HorizontalAlignment="Left" Margin="67,78,0,0" VerticalAlignment="Top" Height="34" Width="116" Click="SteamcmdButton_Click"/>
+        <Button Height="100" Width="124" Content="poopy" />
     </Grid>
 </Window>

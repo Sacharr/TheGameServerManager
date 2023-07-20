@@ -29,6 +29,8 @@ namespace ValheimServer
         private void SteamcmdButton_Click(object sender, RoutedEventArgs e)
         {
             int number = 6;
+            string stringyPoo = "Words in there";
+
             Process.Start("steamcmd.exe", "+quit");
         }
     }

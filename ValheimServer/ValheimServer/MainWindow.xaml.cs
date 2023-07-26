@@ -26,10 +26,10 @@ namespace ValheimServer
             InitializeComponent();
         }
 
-        private void SteamcmdButton_Click(object sender, RoutedEventArgs e)
+      /* private void SteamcmdButton_Click(object sender, RoutedEventArgs e)
         {
             
             Process.Start("steamcmd.exe", "+quit");
-        }
+        }*/
     }
 }

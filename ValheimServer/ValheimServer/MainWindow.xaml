@@ -11,7 +11,17 @@
     <Window.DataContext>
         <vm:MainWindowViewModel/>
     </Window.DataContext>
+
     <Grid>
-        <Button x:Name="SteamcmdButton" Content="{Binding SteamButtonText, Mode=OneWay}" HorizontalAlignment="Left" Margin="67,78,0,0" VerticalAlignment="Top" Height="34" Width="116" Command="{Binding SteamButtonClickCommand}"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="SteamcmdButton" Content="{Binding SteamButtonText, Mode=OneWay}" 
+                HorizontalAlignment="Left" Margin="67,78,0,0" VerticalAlignment="Top" Height="34" Width="116" 
+                Command="{Binding SteamButtonClickCommand}"/>
+
+        <Button x:Name="openFileDialogButton" Content="OpenFileDialog" HorizontalAlignment="Right" Margin="0,77,48,0" 
+                VerticalAlignment="Top" Width="170" Height ="60" Click="OpenFileDialogButton_Click" />
+
     </Grid>
 </Window>

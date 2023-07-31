@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -21,11 +22,18 @@ namespace ValheimServer
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-     
+        //I dont know where I am supposed to stick anything so im putting this here
+        OpenFileDialog ofd = new OpenFileDialog();
+
+        private void ofdButton_Click(object sender, RoutedEventArgs e)
+        {
+            ofd.ShowDialog();
+        }
     }
 }

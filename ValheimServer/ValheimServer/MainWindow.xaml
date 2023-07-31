@@ -21,7 +21,7 @@
                 Command="{Binding SteamButtonClickCommand}"/>
 
         <Button x:Name="ofdButton" Content="OpenFileDialog" HorizontalAlignment="Right" Margin="0,77,48,0" 
-                VerticalAlignment="Top" Width="170" Height ="60" Click="ofdButton_Click" />
+                VerticalAlignment="Top" Width="170" Height ="60" Click="OpenFileDialogButton_Click" />
 
     </Grid>
 </Window>

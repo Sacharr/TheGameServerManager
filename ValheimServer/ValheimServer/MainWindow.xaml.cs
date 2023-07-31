@@ -27,12 +27,10 @@ namespace ValheimServer
         {
             InitializeComponent();
         }
-
-        //I dont know where I am supposed to stick anything so im putting this here
-        OpenFileDialog ofd = new OpenFileDialog();
-
+       
         private void ofdButton_Click(object sender, RoutedEventArgs e)
         {
+            OpenFileDialog ofd = new OpenFileDialog();
             ofd.ShowDialog();
         }
     }

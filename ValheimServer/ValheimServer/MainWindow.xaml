@@ -17,7 +17,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="SteamcmdButton" Content="{Binding SteamButtonText, Mode=OneWay}" 
+        <Button x:Name="SteamcmdButton" Content="{x:Static res:Resources.Steam_Cmd_Button}" 
                 HorizontalAlignment="Left" Margin="67,78,0,0" VerticalAlignment="Top" Height="34" Width="116" 
                 Command="{Binding SteamButtonClickCommand}"/>
 

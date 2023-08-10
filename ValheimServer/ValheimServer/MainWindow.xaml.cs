@@ -33,5 +33,10 @@ namespace ValheimServer
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.ShowDialog();
         }
+
+        private void Uselesscheckbox_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -22,6 +22,7 @@
 
         <Button x:Name="openFileDialogButton" Content="OpenFileDialog" HorizontalAlignment="Right" Margin="0,77,48,0" 
                 VerticalAlignment="Top" Width="170" Height ="60" Click="OpenFileDialogButton_Click" />
-
+         <!--check box code-->
+        <CheckBox x:Name="Uselesscheckbox" IsChecked="{Binding UselessCheckBox}" Content="Click Here" Margin="390,88,-390,-89"/>
     </Grid>
 </Window>

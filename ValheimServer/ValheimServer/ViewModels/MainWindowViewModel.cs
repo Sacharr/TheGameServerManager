@@ -12,11 +12,6 @@ namespace ValheimServer.ViewModels
 {
     public partial class MainWindowViewModel: ObservableObject
     {
-        private string _steamButtonText = "Update SteamCmd";
-        public string SteamButtonText
-        { 
-            get { return _steamButtonText; }
-        }
 
         [RelayCommand]
         private void SteamButtonClick()

@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Server_Name" xml:space="preserve">
+    <value>Server Name</value>
+  </data>
   <data name="Steam_Cmd_Button" xml:space="preserve">
     <value>Update Steam Cmd</value>
   </data>

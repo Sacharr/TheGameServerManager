@@ -61,6 +61,15 @@ namespace ValheimServer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Server Name.
+        /// </summary>
+        public static string Server_Name {
+            get {
+                return ResourceManager.GetString("Server_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update Steam Cmd.
         /// </summary>
         public static string Steam_Cmd_Button {

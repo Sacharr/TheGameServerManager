@@ -33,5 +33,10 @@ namespace ValheimServer
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.ShowDialog();
         }
+
+        private void valheimInstallButton_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("steamcmd.exe", "+login anonymous +force_install_dir \"C:\\ValheimServer\" +app_update 896660 validate +quit");
+        }
     }
 }

@@ -26,6 +26,6 @@
          <!--check box code-->
         <CheckBox x:Name="Uselesscheckbox" IsChecked="{Binding UselessCheckBox}" Content="Click Here" Margin="390,88,-390,-89"/>
         
-        <Label x:Name="serverNameLabel" Content="Server Name" Height="50" Width="150" FontWeight="ExtraBold" FontSize="16" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label x:Name="serverNameLabel" Content="{x:Static res:Resources.Server_Name}" Height="50" Width="150" FontWeight="ExtraBold" FontSize="16" VerticalAlignment="Top" HorizontalAlignment="Left"/>
     </Grid>
 </Window>

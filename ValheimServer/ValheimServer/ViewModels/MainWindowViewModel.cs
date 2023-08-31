@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -31,15 +32,19 @@ namespace ValheimServer.ViewModels
             {
                 SetProperty(ref _uselessCheckBox, value);
             }
-
-
         }
+        
         [RelayCommand]
         private void UpdateValheimButtonClick() 
         {
             Process.Start("steamcmd.exe", "+login anonymous +force_install_dir \"C:\\ValheimServer\" +app_update 896660 validate +quit");
 
-
+        }
+        
+        private void OpenFileDialogClick()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.ShowDialog();
         }
     }
 }

@@ -22,7 +22,7 @@
                 Command="{Binding SteamButtonClickCommand}"/>
 
         <Button x:Name="openFileDialogButton" Content="OpenFileDialog" HorizontalAlignment="Right" Margin="0,77,48,0" 
-                VerticalAlignment="Top" Width="170" Height ="60" Click="OpenFileDialogButton_Click" />
+                VerticalAlignment="Top" Width="170" Height ="60" Command="{Binding OpenFileDialogClickCommand}" />
       
          <!--check box code-->
         <CheckBox x:Name="Uselesscheckbox" IsChecked="{Binding UselessCheckBox}" Content="Click Here" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>

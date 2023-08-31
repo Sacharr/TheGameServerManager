@@ -28,10 +28,9 @@
         <CheckBox x:Name="Uselesscheckbox" IsChecked="{Binding UselessCheckBox}" Content="Click Here" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
         
         <Label x:Name="serverNameLabel" Content="{x:Static res:Resources.Server_Name}" Height="50" Width="150" FontWeight="ExtraBold" FontSize="16" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-
+ 
+        <TextBox x:Name="userInputTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding UserInputTextBox, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="120"/>
+      
         <Button x:Name="valheimInstallButton" Content="Install/Update Valheim Server" Command="{Binding UpdateValheimButtonClickCommand}" Width="170" Height="50" />
-
-
-
     </Grid>
 </Window>

@@ -38,9 +38,24 @@ namespace ValheimServer.ViewModels
         private void UpdateValheimButtonClick() 
         {
             Process.Start("steamcmd.exe", "+login anonymous +force_install_dir \"C:\\ValheimServer\" +app_update 896660 validate +quit");
+        }
 
+        private string _userInputTextBox;
+
+        public string UserInputTextBox
+        {
+            get
+            {
+                return _userInputTextBox;
+            }
+
+            set
+            {
+                SetProperty(ref _userInputTextBox, value);
+            }
         }
         
+        [RelayCommand]
         private void OpenFileDialogClick()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();

@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using CommunityToolkit.Mvvm.Input;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -27,16 +28,7 @@ namespace ValheimServer
         {
             InitializeComponent();
         }
-       
-        private void OpenFileDialogButton_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.ShowDialog();
-        }
 
-        private void valheimInstallButton_Click(object sender, RoutedEventArgs e)
-        {
-            Process.Start("steamcmd.exe", "+login anonymous +force_install_dir \"C:\\ValheimServer\" +app_update 896660 validate +quit");
-        }
+       
     }
 }

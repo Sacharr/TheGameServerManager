@@ -32,10 +32,15 @@ namespace ValheimServer.ViewModels
             {
                 SetProperty(ref _uselessCheckBox, value);
             }
-
+        }
+        
+        [RelayCommand]
+        private void UpdateValheimButtonClick() 
+        {
+            Process.Start("steamcmd.exe", "+login anonymous +force_install_dir \"C:\\ValheimServer\" +app_update 896660 validate +quit");
 
         }
-        [RelayCommand]
+        
         private void OpenFileDialogClick()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();

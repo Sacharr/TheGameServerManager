@@ -29,7 +29,7 @@
         
         <Label x:Name="serverNameLabel" Content="{x:Static res:Resources.Server_Name}" Height="50" Width="150" FontWeight="ExtraBold" FontSize="16" VerticalAlignment="Top" HorizontalAlignment="Left"/>
 
-        <Button x:Name="valheimInstallButton" Content="Install/Update Valheim Server" Click="valheimInstallButton_Click" Width="170" Height="50" />
+        <Button x:Name="valheimInstallButton" Content="Install/Update Valheim Server" Command="{Binding UpdateValheimButtonClickCommand}" Width="170" Height="50" />
 
 
 

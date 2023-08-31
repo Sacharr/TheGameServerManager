@@ -35,7 +35,7 @@ namespace ValheimServer.ViewModels
 
         }
 
-        private string _userInputTextBox = "Text goes here";
+        private string _userInputTextBox;
 
         public string UserInputTextBox
         {
@@ -45,8 +45,8 @@ namespace ValheimServer.ViewModels
             }
 
             set
-            { 
-                _userInputTextBox = value; 
+            {
+                SetProperty(ref _userInputTextBox, value);
             }
 
         }

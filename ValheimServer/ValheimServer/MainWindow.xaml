@@ -31,7 +31,7 @@
 
         <Button x:Name="valheimInstallButton" Content="Install/Update Valheim Server" Click="valheimInstallButton_Click" Width="170" Height="50" />
         
-        <TextBox x:Name="userInputTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+        <TextBox x:Name="userInputTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding UserInputTextBox}" VerticalAlignment="Center" Width="120"/>
 
 
 

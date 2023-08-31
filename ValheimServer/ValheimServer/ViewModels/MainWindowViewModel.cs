@@ -35,11 +35,20 @@ namespace ValheimServer.ViewModels
 
         }
 
-        private string _userInputTextBox = "Type Something";
+        private string _userInputTextBox = "Text goes here";
 
         public string UserInputTextBox
         {
-            get { return _userInputTextBox; };
+            get
+            {
+                return _userInputTextBox;
+            }
+
+            set
+            { 
+                _userInputTextBox = value; 
+            }
+
         }
 
 

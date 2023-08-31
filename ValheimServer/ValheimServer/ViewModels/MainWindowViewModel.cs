@@ -34,6 +34,12 @@ namespace ValheimServer.ViewModels
 
 
         }
+        [RelayCommand]
+        private void UpdateValheimButtonClick() 
+        {
+            Process.Start("steamcmd.exe", "+login anonymous +force_install_dir \"C:\\ValheimServer\" +app_update 896660 validate +quit");
 
+
+        }
     }
 }

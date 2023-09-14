@@ -33,7 +33,7 @@
       
         <Button x:Name="valheimInstallButton" Content="Install/Update Valheim Server" Command="{Binding UpdateValheimButtonClickCommand}" Width="170" Height="50" />
 
-        <Button x:Name="openFolderBrowserDialog" Content="OpenFolderBrowserDialog" HorizontalAlignment="Right" Margin="0,77,48,0" 
+        <Button x:Name="openFolderBrowserDialog" Content="{x:Static res:Resources.Open_Folder_Browser}" HorizontalAlignment="Right" Margin="0,77,48,0" 
         VerticalAlignment="Center" Width="170" Height ="60" Command="{Binding }" />
         
     </Grid>

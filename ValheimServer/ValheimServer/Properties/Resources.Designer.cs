@@ -61,6 +61,15 @@ namespace ValheimServer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select Folder.
+        /// </summary>
+        public static string Open_Folder_Browser {
+            get {
+                return ResourceManager.GetString("Open_Folder_Browser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Server Name.
         /// </summary>
         public static string Server_Name {

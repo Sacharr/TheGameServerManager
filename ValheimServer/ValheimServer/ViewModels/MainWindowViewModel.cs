@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+//using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.Design;
 
 namespace ValheimServer.ViewModels
 {
@@ -66,7 +68,17 @@ namespace ValheimServer.ViewModels
         private void FolderBrowserDialogClick()
         {
             FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
-            folderBrowserDialog.ShowDialog();
+
+            var result = folderBrowserDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                FolderName = folderBrowserDialog.SelectedPath;
+            }
         }
+
+        public string FolderName;
+        
     }
+    
 }

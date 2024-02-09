@@ -77,8 +77,23 @@ namespace ValheimServer.ViewModels
             }
         }
 
-        public string FolderName;
         
+        private string _folderName;
+
+        public string FolderName
+        {
+            get
+            {
+                return _folderName;
+            }
+
+            set
+            {
+                SetProperty(ref _folderName, value);
+            }
+        }
+
+
     }
-    
+
 }

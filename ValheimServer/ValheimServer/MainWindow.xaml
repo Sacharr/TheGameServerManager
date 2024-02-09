@@ -36,7 +36,7 @@
         <Button x:Name="openFolderBrowserDialog" Content="{x:Static res:Resources.Open_Folder_Browser}" HorizontalAlignment="Right" Margin="0,77,48,0" 
         VerticalAlignment="Center" Width="170" Height ="60" Command="{Binding FolderBrowserDialogClickCommand}" />
 
-        <Label x:Name="folderSelectedLabel" Content="{Binding FolderName}" Height="50" Width="150" FontWeight="ExtraBold" FontSize="16" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,167,48,0"/>
+        <Label x:Name="folderSelectedLabel" Content="{Binding FolderName}" Height="50" Width="250" FontWeight="ExtraBold" FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,313,48,0"/>
 
     </Grid>
 </Window>

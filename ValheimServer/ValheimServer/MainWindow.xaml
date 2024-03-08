@@ -27,25 +27,23 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Button x:Name="SteamcmdButton" Content="{x:Static res:Resources.Steam_Cmd_Button}" 
-                HorizontalAlignment="Left" Margin="67,78,0,0" VerticalAlignment="Top" Height="34" Width="116" 
+                Grid.Column="1" Grid.Row="0" Height="34" Width="116" 
                 Command="{Binding SteamButtonClickCommand}"/>
 
-        <Button x:Name="openFileDialogButton" Content="OpenFileDialog" HorizontalAlignment="Right" Margin="0,77,48,0" 
-                VerticalAlignment="Top" Width="170" Height ="60" Command="{Binding OpenFileDialogClickCommand}" />
+        <Button x:Name="openFileDialogButton" Content="OpenFileDialog" Grid.Column="0" Grid.Row="1" Width="170" Height ="60" Command="{Binding OpenFileDialogClickCommand}" />
 
         <!--check box code-->
-        <CheckBox x:Name="Uselesscheckbox" IsChecked="{Binding UselessCheckBox}" Content="Click Here" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+        <CheckBox x:Name="Uselesscheckbox" IsChecked="{Binding UselessCheckBox}" Content="Click Here" Grid.Column="3" Grid.Row="0"/>
 
-        <Label x:Name="serverNameLabel" Content="{x:Static res:Resources.Server_Name}" Height="50" Width="150" FontWeight="ExtraBold" FontSize="16" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label x:Name="serverNameLabel" Content="{x:Static res:Resources.Server_Name}" Height="50" Width="150" FontWeight="ExtraBold" FontSize="16" Grid.Column="0" Grid.Row="0"/>
 
-        <TextBox x:Name="userInputTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding UserInputTextBox, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="120"/>
+        <TextBox x:Name="userInputTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding UserInputTextBox, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="1" Width="120"/>
 
-        <Button x:Name="valheimInstallButton" Content="Install/Update Valheim Server" Command="{Binding UpdateValheimButtonClickCommand}" Width="170" Height="50" />
+        <Button x:Name="valheimInstallButton" Content="Install/Update Valheim Server" Grid.Column="2" Grid.Row="0" Command="{Binding UpdateValheimButtonClickCommand}" Width="170" Height="50" />
 
-        <Button x:Name="openFolderBrowserDialog" Content="{x:Static res:Resources.Open_Folder_Browser}" HorizontalAlignment="Right" Margin="0,77,48,0" 
-        VerticalAlignment="Center" Width="170" Height ="60" Command="{Binding FolderBrowserDialogClickCommand}" />
+        <Button x:Name="openFolderBrowserDialog" Content="{x:Static res:Resources.Open_Folder_Browser}" Grid.Column="0" Grid.Row="2" Width="170" Height ="60" Command="{Binding FolderBrowserDialogClickCommand}" />
 
-        <Label x:Name="folderSelectedLabel" Content="{Binding FolderName}" Height="50" Width="250" FontWeight="ExtraBold" FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,313,48,0"/>
+        <Label x:Name="folderSelectedLabel" Content="{Binding FolderName}" Height="50" Width="250" FontWeight="ExtraBold" FontSize="10" Grid.Column="1" Grid.Row="2"/>
 
     </Grid>
 </Window>

@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Microsoft.Win32;
+//using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -8,6 +8,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Windows.Forms.Design;
 
 namespace ValheimServer.ViewModels
 {
@@ -61,5 +63,37 @@ namespace ValheimServer.ViewModels
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.ShowDialog();
         }
+        
+        [RelayCommand]
+        private void FolderBrowserDialogClick()
+        {
+            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+
+            var result = folderBrowserDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                FolderName = folderBrowserDialog.SelectedPath;
+            }
+        }
+
+        
+        private string _folderName;
+
+        public string FolderName
+        {
+            get
+            {
+                return _folderName;
+            }
+
+            set
+            {
+                SetProperty(ref _folderName, value);
+            }
+        }
+
+
     }
+
 }

@@ -95,5 +95,14 @@ namespace ValheimServer.Properties {
                 return ResourceManager.GetString("Steam_Cmd_Button", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to World Name:.
+        /// </summary>
+        public static string World_Name {
+            get {
+                return ResourceManager.GetString("World_Name", resourceCulture);
+            }
+        }
     }
 }

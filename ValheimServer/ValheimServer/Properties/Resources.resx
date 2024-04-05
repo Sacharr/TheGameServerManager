@@ -129,4 +129,7 @@
   <data name="Steam_Cmd_Button" xml:space="preserve">
     <value>Update Steam Cmd</value>
   </data>
+  <data name="World_Name" xml:space="preserve">
+    <value>World Name:</value>
+  </data>
 </root>

@@ -93,7 +93,20 @@ namespace ValheimServer.ViewModels
             }
         }
 
+        private string _portTextBox;
 
+        public string PortTextBox
+        {
+            get
+            {
+                return _portTextBox;
+            }
+
+            set
+            {
+                SetProperty(ref _portTextBox, value);
+            }
+        }
     }
 
 }

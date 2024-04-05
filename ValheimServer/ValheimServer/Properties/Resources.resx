@@ -120,6 +120,9 @@
   <data name="Open_Folder_Browser" xml:space="preserve">
     <value>Select Folder</value>
   </data>
+  <data name="Port_Name" xml:space="preserve">
+    <value>Port Name:</value>
+  </data>
   <data name="Server_Name" xml:space="preserve">
     <value>Server Name:</value>
   </data>

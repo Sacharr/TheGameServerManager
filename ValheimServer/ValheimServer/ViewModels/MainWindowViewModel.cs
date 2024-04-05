@@ -42,18 +42,18 @@ namespace ValheimServer.ViewModels
             Process.Start("steamcmd.exe", "+login anonymous +force_install_dir \"C:\\ValheimServer\" +app_update 896660 validate +quit");
         }
 
-        private string _userInputTextBox;
+        private string _serverTextBox;
 
-        public string UserInputTextBox
+        public string ServerTextBox
         {
             get
             {
-                return _userInputTextBox;
+                return _serverTextBox;
             }
 
             set
             {
-                SetProperty(ref _userInputTextBox, value);
+                SetProperty(ref _serverTextBox, value);
             }
         }
         

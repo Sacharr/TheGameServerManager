@@ -121,7 +121,7 @@
     <value>Select Folder</value>
   </data>
   <data name="Server_Name" xml:space="preserve">
-    <value>Server Name</value>
+    <value>Server Name:</value>
   </data>
   <data name="Steam_Cmd_Button" xml:space="preserve">
     <value>Update Steam Cmd</value>

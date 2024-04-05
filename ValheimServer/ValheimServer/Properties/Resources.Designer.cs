@@ -70,7 +70,7 @@ namespace ValheimServer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Server Name.
+        ///   Looks up a localized string similar to Server Name:.
         /// </summary>
         public static string Server_Name {
             get {

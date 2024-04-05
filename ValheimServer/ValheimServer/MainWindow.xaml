@@ -35,15 +35,15 @@
         <!--check box code-->
         <CheckBox x:Name="Uselesscheckbox" IsChecked="{Binding UselessCheckBox}" Content="Click Here" Grid.Column="3" Grid.Row="3"/>
 
-        <Label x:Name="serverNameLabel" Content="{x:Static res:Resources.Server_Name}" Height="50" Width="150" FontWeight="ExtraBold" FontSize="16" Grid.Column="0" Grid.Row="0"/>
+        <Label x:Name="serverNameLabel" Content="{x:Static res:Resources.Server_Name}" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"  FontSize="16" Grid.Column="0" Grid.Row="0"/>
 
-        <TextBox x:Name="serverTextBox" TextWrapping="Wrap" Text="{Binding ServerTextBox, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="0" Width="120"/>
+        <TextBox x:Name="serverTextBox" TextWrapping="Wrap" BorderThickness="2" BorderBrush="Black" Text="{Binding ServerTextBox, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="0" Height="50" Width="150"/>
 
         <Button x:Name="valheimInstallButton" Content="Install/Update Valheim Server" Grid.Column="3" Grid.Row="0" Command="{Binding UpdateValheimButtonClickCommand}" Width="170" Height="50" />
 
         <Button x:Name="openFolderBrowserDialog" Content="{x:Static res:Resources.Open_Folder_Browser}" Grid.Column="2" Grid.Row="2" Width="170" Height ="60" Command="{Binding FolderBrowserDialogClickCommand}" />
 
-        <Label x:Name="folderSelectedLabel" Content="{Binding FolderName}" Height="50" Width="250" FontWeight="ExtraBold" FontSize="10" Grid.Column="3" Grid.Row="2"/>
+        <Label x:Name="folderSelectedLabel" Content="{Binding FolderName}" Height="50" Width="150" FontWeight="ExtraBold" FontSize="10" Grid.Column="3" Grid.Row="2"/>
 
     </Grid>
 </Window>

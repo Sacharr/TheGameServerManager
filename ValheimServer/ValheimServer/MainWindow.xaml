@@ -39,17 +39,17 @@
 
         <TextBox x:Name="serverTextBox" TextWrapping="Wrap" BorderThickness="2" BorderBrush="Black" Text="{Binding ServerTextBox, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="0" Height="30" Width="150"/>
 
-        <Label x:Name="passwordNameLabel" Content="{x:Static res:Resources.Server_Password}" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"  FontSize="16" Grid.Column="0" Grid.Row="0"/>
+        <Label x:Name="passwordNameLabel" Content="{x:Static res:Resources.Server_Password}" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"  FontSize="16" Grid.Column="0" Grid.Row="1"/>
 
-        <TextBox x:Name="passwordTextBox" TextWrapping="Wrap" BorderThickness="2" BorderBrush="Black" Text="{Binding PaswordTextBox, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="0" Height="30" Width="150"/>
+        <TextBox x:Name="passwordTextBox" TextWrapping="Wrap" BorderThickness="2" BorderBrush="Black" Text="{Binding PaswordTextBox, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="1" Height="30" Width="150"/>
 
-        <Label x:Name="portNameLabel" Content="{x:Static res:Resources.Port_Name}" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"  FontSize="16" Grid.Column="0" Grid.Row="1"/>
+        <Label x:Name="portNameLabel" Content="{x:Static res:Resources.Port_Name}" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"  FontSize="16" Grid.Column="0" Grid.Row="2"/>
 
-        <TextBox x:Name="portTextBox" TextWrapping="Wrap" BorderThickness="2" BorderBrush="Black" Text="{Binding PortTextBox, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="1" Height="30" Width="150"/>
+        <TextBox x:Name="portTextBox" TextWrapping="Wrap" BorderThickness="2" BorderBrush="Black" Text="{Binding PortTextBox, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="2" Height="30" Width="150"/>
 
-        <Label x:Name="worldNameLabel" Content="{x:Static res:Resources.World_Name}" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"  FontSize="16" Grid.Column="0" Grid.Row="2"/>
+        <Label x:Name="worldNameLabel" Content="{x:Static res:Resources.World_Name}" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"  FontSize="16" Grid.Column="0" Grid.Row="3"/>
 
-        <TextBox x:Name="worldTextBox" TextWrapping="Wrap" BorderThickness="2" BorderBrush="Black" Text="{Binding WorldTextBox, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="2" Height="30" Width="150"/>
+        <TextBox x:Name="worldTextBox" TextWrapping="Wrap" BorderThickness="2" BorderBrush="Black" Text="{Binding WorldTextBox, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="3" Height="30" Width="150"/>
 
         <Button x:Name="valheimInstallButton" Content="Install/Update Valheim Server" Grid.Column="3" Grid.Row="0" Command="{Binding UpdateValheimButtonClickCommand}" Width="170" Height="50" />
 

@@ -123,6 +123,22 @@ namespace ValheimServer.ViewModels
             }
 
         }
+
+        private string _passwordTextBox;
+
+        public string PaswordTextBox
+        {
+            get
+            {
+                return _passwordTextBox;
+            }
+
+            set
+            {
+                SetProperty(ref _passwordTextBox, value);
+            }
+
+        }
     }
 
 }

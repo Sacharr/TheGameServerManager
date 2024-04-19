@@ -13,7 +13,7 @@ using System.Windows.Forms.Design;
 
 namespace ValheimServer.ViewModels
 {
-    public partial class MainWindowViewModel: ObservableObject
+    public partial class MainWindowViewModel : ObservableObject
     {
 
         [RelayCommand]
@@ -24,46 +24,46 @@ namespace ValheimServer.ViewModels
         private bool _uselessCheckBox = false;
 
         public bool UselessCheckBox
-        { 
-            get 
-            { 
-                return _uselessCheckBox;
-            } 
-
-            set 
-            {
-                SetProperty(ref _uselessCheckBox, value);
-            }
-        }
-        
-        [RelayCommand]
-        private void UpdateValheimButtonClick() 
-        {
-            Process.Start("steamcmd.exe", "+login anonymous +force_install_dir \"C:\\ValheimServer\" +app_update 896660 validate +quit");
-        }
-
-        private string _userInputTextBox;
-
-        public string UserInputTextBox
         {
             get
             {
-                return _userInputTextBox;
+                return _uselessCheckBox;
             }
 
             set
             {
-                SetProperty(ref _userInputTextBox, value);
+                SetProperty(ref _uselessCheckBox, value);
             }
         }
-        
+
+        [RelayCommand]
+        private void UpdateValheimButtonClick()
+        {
+            Process.Start("steamcmd.exe", "+login anonymous +force_install_dir \"C:\\ValheimServer\" +app_update 896660 validate +quit");
+        }
+
+        private string _serverTextBox;
+
+        public string ServerTextBox
+        {
+            get
+            {
+                return _serverTextBox;
+            }
+
+            set
+            {
+                SetProperty(ref _serverTextBox, value);
+            }
+        }
+
         [RelayCommand]
         private void OpenFileDialogClick()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.ShowDialog();
         }
-        
+
         [RelayCommand]
         private void FolderBrowserDialogClick()
         {
@@ -77,7 +77,7 @@ namespace ValheimServer.ViewModels
             }
         }
 
-        
+
         private string _folderName;
 
         public string FolderName
@@ -93,7 +93,36 @@ namespace ValheimServer.ViewModels
             }
         }
 
+        private string _portTextBox;
 
+        public string PortTextBox
+        {
+            get
+            {
+                return _portTextBox;
+            }
+
+            set
+            {
+                SetProperty(ref _portTextBox, value);
+            }
+        }
+
+        private string _worldTextBox;
+
+        public string WorldTextBox
+        {
+            get
+            {
+                return _worldTextBox;
+            }
+
+            set
+            {
+                SetProperty(ref _worldTextBox, value);
+            }
+
+        }
     }
 
 }

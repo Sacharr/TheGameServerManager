@@ -70,7 +70,16 @@ namespace ValheimServer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Server Name.
+        ///   Looks up a localized string similar to Port Name:.
+        /// </summary>
+        public static string Port_Name {
+            get {
+                return ResourceManager.GetString("Port_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Server Name:.
         /// </summary>
         public static string Server_Name {
             get {
@@ -84,6 +93,15 @@ namespace ValheimServer.Properties {
         public static string Steam_Cmd_Button {
             get {
                 return ResourceManager.GetString("Steam_Cmd_Button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to World Name:.
+        /// </summary>
+        public static string World_Name {
+            get {
+                return ResourceManager.GetString("World_Name", resourceCulture);
             }
         }
     }

@@ -139,6 +139,22 @@ namespace ValheimServer.ViewModels
             }
 
         }
+
+        private string _hiddenTextBox;
+
+        public string HiddenTextBox
+        {
+            get
+            {
+                return _hiddenTextBox;
+            }
+
+            set
+            {
+                SetProperty(ref _hiddenTextBox, value);
+            }
+
+        }
     }
 
 }

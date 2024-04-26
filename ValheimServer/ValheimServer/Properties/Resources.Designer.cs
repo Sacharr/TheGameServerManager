@@ -88,6 +88,15 @@ namespace ValheimServer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pasword:.
+        /// </summary>
+        public static string Server_Password {
+            get {
+                return ResourceManager.GetString("Server_Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update Steam Cmd.
         /// </summary>
         public static string Steam_Cmd_Button {

@@ -155,6 +155,15 @@ namespace ValheimServer.ViewModels
             }
 
         }
+
+
+        [RelayCommand]
+        private void ServerStartButtonClick()
+        {
+            Process.Start("valheim_server.exe", "-nographics -batchmode -name \"USER_ENTERED_NAME\" -port USER_ENTERED_PORT -world \"USER_ENTERED_WORLD\" -password \"USER_ENTERED_PW\" -public 1\"");
+        }
+
+
     }
 
 }

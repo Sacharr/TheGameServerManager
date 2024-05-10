@@ -35,6 +35,19 @@
         <!--check box code-->
         <CheckBox x:Name="Uselesscheckbox" IsChecked="{Binding UselessCheckBox}" Content="Click Here" Grid.Column="3" Grid.Row="3"/>
 
+        <TextBox x:Name="hiddenTextBox" TextWrapping="Wrap" BorderThickness="2" BorderBrush="Black" Text="{Binding HiddenTextBox, UpdateSourceTrigger=PropertyChanged}" Grid.Column="3" Grid.Row="3" Height="30" Width="150">
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Setter Property="Visibility" Value="Hidden"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding UselessCheckBox}" Value="True">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+
         <Label x:Name="serverNameLabel" Content="{x:Static res:Resources.Server_Name}" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"  FontSize="16" Grid.Column="0" Grid.Row="0"/>
 
         <TextBox x:Name="serverTextBox" TextWrapping="Wrap" BorderThickness="2" BorderBrush="Black" Text="{Binding ServerTextBox, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="0" Height="30" Width="150"/>

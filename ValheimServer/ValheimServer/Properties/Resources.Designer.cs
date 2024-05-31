@@ -70,7 +70,7 @@ namespace ValheimServer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Port Name:.
+        ///   Looks up a localized string similar to Port Number:.
         /// </summary>
         public static string Port_Name {
             get {

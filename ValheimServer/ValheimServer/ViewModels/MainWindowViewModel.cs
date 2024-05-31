@@ -160,7 +160,13 @@ namespace ValheimServer.ViewModels
         [RelayCommand]
         private void ServerStartButtonClick()
         {
-            Process.Start("C:\\valheimserver\\valheim_server.exe", $"-nographics -batchmode -name \"{_serverTextBox}\" -port \"{_portTextBox}\"  - world \"{_worldTextBox}\" -password \"{_passwordTextBox}\" -public 1");
+            //Process.Start("C:\\valheimserver\\valheim_server.exe", $"-nographics -batchmode -name \"{_serverTextBox}\" -port {_portTextBox} -world \"{_worldTextBox}\" -password \"{_passwordTextBox}\" -public 1");
+
+            ProcessStartInfo startInfo = new ProcessStartInfo("C:\\valheimserver\\valheim_server.exe", $"-nographics -batchmode -name \"{_serverTextBox}\" -port {_portTextBox} -world \"{_worldTextBox}\" -password \"{_passwordTextBox}\" -public 1");
+
+            Process.Start(startInfo);
+
+
         }
 
 

@@ -70,5 +70,7 @@
 
         <Label x:Name="folderSelectedLabel" Content="{Binding FolderName}" Height="50" Width="150" FontWeight="ExtraBold" FontSize="10" Grid.Column="3" Grid.Row="2"/>
 
+        <Button x:Name="startServerButton" Content="{x:Static res:Resources.Start_Server}" Grid.Column="2" Grid.Row="3" Width="170" Height ="60" Command="{Binding ServerStartButtonClickCommand}" />
+
     </Grid>
 </Window>

@@ -70,7 +70,7 @@ namespace ValheimServer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Port Name:.
+        ///   Looks up a localized string similar to Port Number:.
         /// </summary>
         public static string Port_Name {
             get {
@@ -93,6 +93,15 @@ namespace ValheimServer.Properties {
         public static string Server_Password {
             get {
                 return ResourceManager.GetString("Server_Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start Server.
+        /// </summary>
+        public static string Start_Server {
+            get {
+                return ResourceManager.GetString("Start_Server", resourceCulture);
             }
         }
         

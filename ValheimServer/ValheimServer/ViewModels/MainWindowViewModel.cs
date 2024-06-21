@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
+using System.Windows.Media.Animation;
 
 namespace ValheimServer.ViewModels
 {
@@ -155,6 +156,25 @@ namespace ValheimServer.ViewModels
             }
 
         }
+
+
+        [RelayCommand]
+        private void ServerStartButtonClick()
+        {
+        
+            ProcessStartInfo startInfo = new ProcessStartInfo
+            {
+                FileName = "cmd.exe",
+                Arguments = $@"/K set SteamAppId=892970 && C:\\valheimserver\\valheim_server.exe -nographics -batchmode -name ""{ _serverTextBox }"" -port {_portTextBox} -world ""{_worldTextBox}"" -password ""{_passwordTextBox}"" -public 1",
+                UseShellExecute = false
+            };
+           
+            Process.Start(startInfo);
+
+
+        }
+
+
     }
 
 }

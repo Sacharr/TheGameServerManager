@@ -40,8 +40,33 @@ namespace ValheimServer.ViewModels
         [RelayCommand]
         private void UpdateValheimButtonClick()
         {
+            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+
+            var result = folderBrowserDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                InstallFolder = folderBrowserDialog.SelectedPath;
+            }
+            
             Process.Start("steamcmd.exe", "+login anonymous +force_install_dir \"C:\\ValheimServer\" +app_update 896660 validate +quit");
         }
+
+        private string _installFolder;
+
+        public string InstallFolder
+        {
+            get
+            {
+                return _installFolder;
+            }
+
+            set
+            {
+                SetProperty(ref _installFolder, value);
+            }
+        }
+
 
         private string _serverTextBox;
 

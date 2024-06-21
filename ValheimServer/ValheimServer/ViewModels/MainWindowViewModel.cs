@@ -40,8 +40,34 @@ namespace ValheimServer.ViewModels
         [RelayCommand]
         private void UpdateValheimButtonClick()
         {
-            Process.Start("steamcmd.exe", "+login anonymous +force_install_dir \"C:\\ValheimServer\" +app_update 896660 validate +quit");
+            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+
+            var result = folderBrowserDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                InstallFolder = folderBrowserDialog.SelectedPath;
+
+            }
+            
+            Process.Start("steamcmd.exe", $"+login anonymous +force_install_dir {_installFolder} +app_update 896660 validate +quit");
         }
+
+        private string _installFolder;
+
+        public string InstallFolder
+        {
+            get
+            {
+                return _installFolder;
+            }
+
+            set
+            {
+                SetProperty(ref _installFolder, value);
+            }
+        }
+
 
         private string _serverTextBox;
 
@@ -165,7 +191,7 @@ namespace ValheimServer.ViewModels
             ProcessStartInfo startInfo = new ProcessStartInfo
             {
                 FileName = "cmd.exe",
-                Arguments = $@"/K set SteamAppId=892970 && C:\\valheimserver\\valheim_server.exe -nographics -batchmode -name ""{ _serverTextBox }"" -port {_portTextBox} -world ""{_worldTextBox}"" -password ""{_passwordTextBox}"" -public 1",
+                Arguments = $@"/K set SteamAppId=892970 && {_installFolder}\\valheim_server.exe -nographics -batchmode -name ""{ _serverTextBox }"" -port {_portTextBox} -world ""{_worldTextBox}"" -password ""{_passwordTextBox}"" -public 1",
                 UseShellExecute = false
             };
            

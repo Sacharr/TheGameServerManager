@@ -49,7 +49,7 @@ namespace ValheimServer.ViewModels
                 InstallFolder = folderBrowserDialog.SelectedPath;
             }
             
-            Process.Start("steamcmd.exe", $"+login anonymous +force_install_dir {_serverTextBox } +app_update 896660 validate +quit");
+            Process.Start("steamcmd.exe", $"+login anonymous +force_install_dir {_installFolder} +app_update 896660 validate +quit");
         }
 
         private string _installFolder;

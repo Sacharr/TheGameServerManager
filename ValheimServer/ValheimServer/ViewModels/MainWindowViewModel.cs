@@ -17,6 +17,13 @@ namespace ValheimServer.ViewModels
     public partial class MainWindowViewModel : ObservableObject
     {
 
+        public MainWindowViewModel()
+        {
+
+            _installFolder = AppSettings.Default.InstallFolder;
+
+        }
+
         [RelayCommand]
         private void SteamButtonClick()
         {

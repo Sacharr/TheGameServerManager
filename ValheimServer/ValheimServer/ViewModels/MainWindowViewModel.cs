@@ -54,6 +54,8 @@ namespace ValheimServer.ViewModels
             if (result == DialogResult.OK)
             {
                 InstallFolder = folderBrowserDialog.SelectedPath;
+                AppSettings.Default.InstallFolder = InstallFolder;
+                AppSettings.Default.Save();
 
             }
             

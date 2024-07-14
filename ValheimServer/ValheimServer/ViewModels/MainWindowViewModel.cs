@@ -17,6 +17,13 @@ namespace ValheimServer.ViewModels
     public partial class MainWindowViewModel : ObservableObject
     {
 
+        public MainWindowViewModel()
+        {
+
+            _installFolder = AppSettings.Default.InstallFolder;
+
+        }
+
         [RelayCommand]
         private void SteamButtonClick()
         {
@@ -47,6 +54,8 @@ namespace ValheimServer.ViewModels
             if (result == DialogResult.OK)
             {
                 InstallFolder = folderBrowserDialog.SelectedPath;
+                AppSettings.Default.InstallFolder = InstallFolder;
+                AppSettings.Default.Save();
 
             }
             

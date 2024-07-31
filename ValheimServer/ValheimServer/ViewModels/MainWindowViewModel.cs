@@ -21,6 +21,10 @@ namespace ValheimServer.ViewModels
         {
 
             _installFolder = AppSettings.Default.InstallFolder;
+            _serverTextBox = AppSettings.Default.ServerName;
+            _passwordTextBox = AppSettings.Default.Password;
+            _portTextBox = AppSettings.Default.PortNumber;
+            _worldTextBox = AppSettings.Default.WorldName;
 
         }
 
@@ -206,6 +210,11 @@ namespace ValheimServer.ViewModels
            
             Process.Start(startInfo);
 
+            AppSettings.Default.ServerName = ServerTextBox;
+            AppSettings.Default.Password = PaswordTextBox;
+            AppSettings.Default.PortNumber = PortTextBox;  
+            AppSettings.Default.WorldName = WorldTextBox;
+            AppSettings.Default.Save();
 
         }
 

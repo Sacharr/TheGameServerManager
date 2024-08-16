@@ -97,6 +97,15 @@ namespace ValheimServer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Server Visible.
+        /// </summary>
+        public static string Server_Visibilty {
+            get {
+                return ResourceManager.GetString("Server_Visibilty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Start Server.
         /// </summary>
         public static string Start_Server {

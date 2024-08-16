@@ -196,6 +196,21 @@ namespace ValheimServer.ViewModels
 
         }
 
+        private bool _serverVisibilityCheckBox = true;
+
+        public bool ServerVisibilityCheckBox
+        {
+            get
+            {
+                return _serverVisibilityCheckBox;
+            }
+
+            set
+            {
+                SetProperty(ref _serverVisibilityCheckBox, value);
+            }
+        }
+
 
         [RelayCommand]
         private void ServerStartButtonClick()

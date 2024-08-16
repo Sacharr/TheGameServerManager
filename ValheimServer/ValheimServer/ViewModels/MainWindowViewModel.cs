@@ -62,7 +62,7 @@ namespace ValheimServer.ViewModels
                 AppSettings.Default.Save();
 
             }
-            
+
             Process.Start("steamcmd.exe", $"+login anonymous +force_install_dir {_installFolder} +app_update 896660 validate +quit");
         }
 
@@ -209,7 +209,24 @@ namespace ValheimServer.ViewModels
             {
                 SetProperty(ref _serverVisibilityCheckBox, value);
             }
+
         }
+
+        private int _serverVisibiltyCheck
+        {
+            get
+            {
+                if (_serverVisibilityCheckBox == true)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
+
 
 
         [RelayCommand]
@@ -219,7 +236,7 @@ namespace ValheimServer.ViewModels
             ProcessStartInfo startInfo = new ProcessStartInfo
             {
                 FileName = "cmd.exe",
-                Arguments = $@"/K set SteamAppId=892970 && {_installFolder}\\valheim_server.exe -nographics -batchmode -name ""{ _serverTextBox }"" -port {_portTextBox} -world ""{_worldTextBox}"" -password ""{_passwordTextBox}"" -public 1",
+                Arguments = $@"/K set SteamAppId=892970 && {_installFolder}\\valheim_server.exe -nographics -batchmode -name ""{ _serverTextBox }"" -port {_portTextBox} -world ""{_worldTextBox}"" -password ""{_passwordTextBox}"" -public {_serverVisibiltyCheck}",
                 UseShellExecute = false
             };
            

@@ -129,6 +129,9 @@
   <data name="Server_Password" xml:space="preserve">
     <value>Pasword:</value>
   </data>
+  <data name="Server_Visibilty" xml:space="preserve">
+    <value>Server Visible</value>
+  </data>
   <data name="Start_Server" xml:space="preserve">
     <value>Start Server</value>
   </data>

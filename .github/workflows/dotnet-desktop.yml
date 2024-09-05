@@ -5,6 +5,8 @@
  jobs:
    build:
      runs-on: windows-latest
+    env:
+      Solution_Name: ValheimServer.sln
 
      steps:
      - name: Checkout code
@@ -16,11 +18,11 @@
          dotnet-version: '8.0.x'
 
      - name: Restore dependencies
-       run: dotnet restore
+       run: dotnet restore $env:Solution_Name
 
      - name: Build
-       run: dotnet build --no-restore --configuration Release
+       run: dotnet build $env:Solution_Name --no-restore --configuration Release
 
      - name: Run StyleCop Analyzers
-       run: dotnet build --no-restore --configuration Release /p:TreatWarningsAsErrors=true
+       run: dotnet build $env:Solution_Name --no-restore --configuration Release /p:TreatWarningsAsErrors=true
     

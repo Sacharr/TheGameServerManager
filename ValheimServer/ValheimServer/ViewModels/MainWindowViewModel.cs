@@ -16,7 +16,6 @@ namespace ValheimServer.ViewModels
     /// <summary>
     /// Represents the main window view model.
     /// </summary>
-    /// 
     public partial class MainWindowViewModel : ObservableObject
     {
         private bool _uselessCheckBox = false;

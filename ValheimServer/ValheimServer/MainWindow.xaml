@@ -55,7 +55,7 @@
 
         <Label x:Name="passwordNameLabel" Content="{x:Static res:Resources.Server_Password}" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"  FontSize="16" Grid.Column="0" Grid.Row="1"/>
 
-        <components:BindablePasswordBox x:Name="passwordTextBox" BorderThickness="2" BorderBrush="Black" Password="{Binding PaswordTextBox, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="1" Height="30" Width="150"/>
+        <components:BindablePasswordBox x:Name="passwordTextBox" BorderThickness="2" BorderBrush="Black" Password="{Binding PaswordTextBox, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" Height="30" Width="150"/>
 
         <Label x:Name="portNameLabel" Content="{x:Static res:Resources.Port_Name}" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"  FontSize="16" Grid.Column="0" Grid.Row="2"/>
 

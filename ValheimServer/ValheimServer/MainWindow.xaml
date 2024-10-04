@@ -75,5 +75,7 @@
 
         <CheckBox x:Name="serverVisibilityCheckBox" IsChecked="{Binding ServerVisibilityCheckBox}" Content="{x:Static res:Resources.Server_Visibilty}" Grid.Column="3" Grid.Row="1"/>
 
+        <CheckBox x:Name="serverCrossPlayCheckBox" IsChecked="{Binding ServerCrossPlayCheckBox}" Content="{x:Static res:Resources.Server_Crossplay}" Grid.Column="3" Grid.Row="2"/>
+
     </Grid>
 </Window>

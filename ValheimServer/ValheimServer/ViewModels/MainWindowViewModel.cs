@@ -27,6 +27,7 @@ namespace ValheimServer.ViewModels
         private string _passwordTextBox;
         private string _hiddenTextBox;
         private bool _serverVisibilityCheckBox = true;
+        private bool _serverCrossPlayCheckBox = false;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MainWindowViewModel"/> class.
@@ -186,6 +187,22 @@ namespace ValheimServer.ViewModels
             }
         }
 
+        /// <summary>
+        /// Gets or Sets a value indicating whether the checkbox is visible.
+        /// </summary>
+        public bool ServerCrossPlayCheckBox
+        {
+            get
+            {
+                return _serverCrossPlayCheckBox;
+            }
+
+            set
+            {
+                SetProperty(ref _serverCrossPlayCheckBox, value);
+            }
+        }
+
         private int ServerVisibiltyCheck
         {
             get
@@ -197,6 +214,21 @@ namespace ValheimServer.ViewModels
                 else
                 {
                     return 0;
+                }
+            }
+        }
+
+        private string ServerCrossPlayCheck
+        {
+            get
+            {
+                if (_serverCrossPlayCheckBox == true)
+                {
+                    return "-crossplay";
+                }
+                else
+                {
+                    return " ";
                 }
             }
         }
@@ -250,7 +282,7 @@ namespace ValheimServer.ViewModels
             ProcessStartInfo startInfo = new ProcessStartInfo
             {
                 FileName = "cmd.exe",
-                Arguments = $@"/K set SteamAppId=892970 && {_installFolder}\\valheim_server.exe -nographics -batchmode -name ""{_serverTextBox}"" -port {_portTextBox} -world ""{_worldTextBox}"" -password ""{_passwordTextBox}"" -public {ServerVisibiltyCheck}",
+                Arguments = $@"/K set SteamAppId=892970 && {_installFolder}\\valheim_server.exe -nographics -batchmode -name ""{_serverTextBox}"" -port {_portTextBox} -world ""{_worldTextBox}"" -password ""{_passwordTextBox}"" -public {ServerVisibiltyCheck} {ServerCrossPlayCheck}",
                 UseShellExecute = false,
             };
 

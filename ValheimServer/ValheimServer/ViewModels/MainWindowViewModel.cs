@@ -27,6 +27,7 @@ namespace ValheimServer.ViewModels
         private string _passwordTextBox;
         private string _hiddenTextBox;
         private bool _serverVisibilityCheckBox = true;
+        private bool _serverCrossPlayCheckBox = false;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MainWindowViewModel"/> class.
@@ -186,11 +187,42 @@ namespace ValheimServer.ViewModels
             }
         }
 
+        /// <summary>
+        /// Gets or Sets a value indicating whether the checkbox is visible.
+        /// </summary>
+        public bool ServerCrossPlayCheckBox
+        {
+            get
+            {
+                return _serverCrossPlayCheckBox;
+            }
+
+            set
+            {
+                SetProperty(ref _serverCrossPlayCheckBox, value);
+            }
+        }
+
         private int ServerVisibiltyCheck
         {
             get
             {
                 if (_serverVisibilityCheckBox == true)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
+
+        private int ServerCrossPlayCheck
+        {
+            get
+            {
+                if (_serverCrossPlayCheckBox == true)
                 {
                     return 1;
                 }

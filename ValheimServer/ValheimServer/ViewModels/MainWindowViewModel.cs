@@ -218,17 +218,17 @@ namespace ValheimServer.ViewModels
             }
         }
 
-        private int ServerCrossPlayCheck
+        private string ServerCrossPlayCheck
         {
             get
             {
                 if (_serverCrossPlayCheckBox == true)
                 {
-                    return 1;
+                    return "-crossplay";
                 }
                 else
                 {
-                    return 0;
+                    return " ";
                 }
             }
         }
@@ -282,7 +282,7 @@ namespace ValheimServer.ViewModels
             ProcessStartInfo startInfo = new ProcessStartInfo
             {
                 FileName = "cmd.exe",
-                Arguments = $@"/K set SteamAppId=892970 && {_installFolder}\\valheim_server.exe -nographics -batchmode -name ""{_serverTextBox}"" -port {_portTextBox} -world ""{_worldTextBox}"" -password ""{_passwordTextBox}"" -public {ServerVisibiltyCheck}",
+                Arguments = $@"/K set SteamAppId=892970 && {_installFolder}\\valheim_server.exe -nographics -batchmode -name ""{_serverTextBox}"" -port {_portTextBox} -world ""{_worldTextBox}"" -password ""{_passwordTextBox}"" -public {ServerVisibiltyCheck} {ServerCrossPlayCheck}",
                 UseShellExecute = false,
             };
 

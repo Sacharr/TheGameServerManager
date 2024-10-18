@@ -260,6 +260,7 @@ namespace ValheimServer.ViewModels
             AppSettings.Default.Password = PaswordTextBox;
             AppSettings.Default.PortNumber = PortTextBox;
             AppSettings.Default.WorldName = WorldTextBox;
+            AppSettings.Default.ServerVisibility = ServerVisibilityCheckBox;
             AppSettings.Default.Save();
         }
     }

@@ -41,8 +41,7 @@ namespace ValheimServer.ViewModels
             _worldTextBox = AppSettings.Default.WorldName;
             _serverVisibilityCheckBox = AppSettings.Default.ServerVisibility;
 
-            // insert commented code once crossplay code is merged
-            // _serverCrossPlayCheckBox = AppSettings.Default.Crossplay;
+            _serverCrossPlayCheckBox = AppSettings.Default.Crossplay;
             _folderName = string.Empty;
             _hiddenTextBox = string.Empty;
         }
@@ -298,8 +297,7 @@ namespace ValheimServer.ViewModels
             AppSettings.Default.WorldName = WorldTextBox;
             AppSettings.Default.ServerVisibility = ServerVisibilityCheckBox;
 
-            // insert commented code once crossplay code is merged
-            // AppSettings.Default.Crossplay = ServerCrossPlayCheckBox;
+            AppSettings.Default.Crossplay = ServerCrossPlayCheckBox;
             AppSettings.Default.Save();
         }
     }

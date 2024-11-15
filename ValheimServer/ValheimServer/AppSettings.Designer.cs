@@ -82,5 +82,29 @@ namespace ValheimServer {
                 this["WorldName"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ServerVisibility {
+            get {
+                return ((bool)(this["ServerVisibility"]));
+            }
+            set {
+                this["ServerVisibility"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Crossplay {
+            get {
+                return ((bool)(this["Crossplay"]));
+            }
+            set {
+                this["Crossplay"] = value;
+            }
+        }
     }
 }

@@ -39,6 +39,9 @@ namespace ValheimServer.ViewModels
             _passwordTextBox = AppSettings.Default.Password;
             _portTextBox = AppSettings.Default.PortNumber;
             _worldTextBox = AppSettings.Default.WorldName;
+            _serverVisibilityCheckBox = AppSettings.Default.ServerVisibility;
+
+            _serverCrossPlayCheckBox = AppSettings.Default.Crossplay;
             _folderName = string.Empty;
             _hiddenTextBox = string.Empty;
         }
@@ -292,6 +295,9 @@ namespace ValheimServer.ViewModels
             AppSettings.Default.Password = PaswordTextBox;
             AppSettings.Default.PortNumber = PortTextBox;
             AppSettings.Default.WorldName = WorldTextBox;
+            AppSettings.Default.ServerVisibility = ServerVisibilityCheckBox;
+
+            AppSettings.Default.Crossplay = ServerCrossPlayCheckBox;
             AppSettings.Default.Save();
         }
     }
